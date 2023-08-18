@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+       
+        <link rel="stylesheet" href="static/css/bootstrap.css">
+        <link rel="stylesheet" href="static/css/bootstrap-responsive.css">
+        <link rel="stylesheet" href="static/css/custom-styles.css">
+        <link rel="stylesheet" href="static/css/component.css">
+        <link rel="stylesheet" href="static/css/font-awesome.css">
+        <link rel="stylesheet" href="static/css/font-awesome-ie7.css">
+
+        <script src="static/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+            <div class="wrap-bg">
+                
+                <div class="container">
+                <div class="banner">
+                    <div class="carousel slide" id="myCarousel">
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="item">
+                                            <!-- <img src="static/img/banner-image.jpg" alt=""> -->
+                                            <img src="static/img/red-and-blue-kidneys.jpg" alt="">
+                                            <div class="carousel-caption">
+                                              
+                                              <h2>Chronic Kidney Disease Stage Identification in HIV Infected Patients using Machine Learning</h2>
+                                              <div class="social-icons">
+                                                <ul>
+                                                    <li><a href="#"><i class="fw-icon-facebook icon"></i></a></li>
+                                                    <li><a href="#"><i class="fw-icon-twitter icon"></i></a></li>
+                                                    <li><a href="#"><i class="fw-icon-google-plus icon"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="item active">
+                                            <!-- <img src="static/img/banner-image.jpg" alt=""> -->
+                                            <img src="static/img/red-and-blue-kidneys.jpg" alt="">
+                                            <div class="carousel-caption">
+                                              
+                                              <h2>Chronic Kidney Disease Stage Identification in HIV Infected Patients using Machine Learning</h2>
+                                              <div class="social-icons">
+                                                <ul>
+                                                    <li><a href="#"><i class="fw-icon-facebook icon"></i></a></li>
+                                                    <li><a href="#"><i class="fw-icon-twitter icon"></i></a></li>
+                                                    <li><a href="#"><i class="fw-icon-google-plus icon"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <!-- <img src="static/img/banner-image.jpg" alt=""> -->
+                                            <img src="static/img/red-and-blue-kidneys.jpg" alt="">
+                                            <div class="carousel-caption">
+                                              
+                                              <h2>Chronic Kidney Disease Stage Identification in HIV Infected Patients using Machine Learning</h2>
+                                              <div class="social-icons">
+                                                <ul>
+                                                    <li><a href="#"><i class="fw-icon-facebook icon"></i></a></li>
+                                                    <li><a href="#"><i class="fw-icon-twitter icon"></i></a></li>
+                                                    <li><a href="#"><i class="fw-icon-google-plus icon"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            </div>
+                                        </div>                                    
+                                    </div>
+                                    <!-- Carousel nav -->
+                                    <a data-slide="prev" href="#myCarousel" class="carousel-control left"><i class="fw-icon-chevron-left"></i></a>
+                                    <a data-slide="next" href="#myCarousel" class="carousel-control right"><i class="fw-icon-chevron-right"></i></a>
+                                </div>
+                </div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="navbar">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <i class="fw-icon-th-list"></i>
+                    </a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active border-left"><a href="/index">Home</a></li>
+
+                            <!-- <li><a href="/about">About</a></li>
+                            <li><a href="/notebook">Notebook</a></li> -->
+                            <li><a href="/login">Signout</a></li>
+                            
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+                
+            </div>
+            <div class="container bg-light-gray">
+              <div class="main-content">
+                
+                <div class="ruler"></div>
+                <div class="featured-blocks">
+                    <div class="row-fluid">
+
+        <h2 class="text-center text-capitalize pt-5">Please fill up the following information!!</h2>
+        <hr class="w-75 mx-auto pt-5">
+       
+          <div  class="col-lg-6 col-md-6 col-12">
+            <form action="{{ url_for('predict')}}" method="post">
+              <div class="container">
+                <div class="row">
+                  <div class="col-8">
+                  <div class="form-group">
+                    <!-- TODO : Year to accept only year date picker -->
+                    <label for="sg">Gender</label>
+                    <select class="form-group" name="0" required>
+                      <option value="">Choose a Level</option>
+                      <option value="0">Female</option>
+                      <option value="1">Male</option>
+                      
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="age">Age</label>
+                    <input class="form-group" type="number" id="age" name="1" required="required" placeholder="Enter the Age">
+                  </div>
+                  <div class="form-group">
+                    <label for="age1">Blood Pressure</label>
+                    <input class="form-group" type="text" id="age1" name="2" required="required" placeholder="Enter the bp">
+                  </div>
+                  <div class="form-group">
+                    <label for="age2">Specific Gravity</label>
+                    <input class="form-group" type="text" id="age2" name="3" required="required" placeholder="Enter the sg">
+                  </div>
+                  <div class="form-group">
+                    <label for="age3">Albumin</label>
+                    <input class="form-group" type="text" id="age3" name="4" required="required" placeholder="Enter the al">
+                  </div>
+                  <div class="form-group">
+                    <label for="age4">Sugar</label>
+                    <input class="form-group" type="text" id="age4" name="5" required="required" placeholder="Enter the sg">
+                  </div>
+                  <div class="form-group">
+                    <label for="age5">Red Blood Cells</label>
+                    <select class="form-group" name="6" required>
+                      <option value="">Choose a Level</option>
+                      <option value="0">Abnormal</option>
+                      <option value="1">Normal</option>
+                      
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="age6">Pus Cell</label>
+                    <select class="form-group" name="7" required>
+                      <option value="">Choose a Level</option>
+                      <option value="0">Abnormal</option>
+                      <option value="1">Normal</option>
+                      
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="age7">Pus Cell Clumps</label>
+                    <select class="form-group" name="8" required>
+                      <option value="">Choose a Level</option>
+                      <option value="0">Not Present</option>
+                      <option value="1">Present</option>
+                      
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="age8">Bacteria</label>
+                    <select class="form-group" name="9" required>
+                      <option value="">Choose a Level</option>
+                      <option value="0">Not Present</option>
+                      <option value="1">Present</option>
+                      
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="age9">blood glucose random</label>
+                    <input class="form-group" type="text" id="age9" name="10" required="required" placeholder="Enter the bgr">
+                  </div>
+                  <div class="form-group">
+                    <label for="age1">Blood Urea</label>
+                    <input class="form-group" type="number" id="age1" name="11" required="required" placeholder="Enter the bu">
+                  </div>
+                  <div class="form-group">
+                    <label for="age11">Serum Creatinine</label>
+                    <input class="form-group" type="text" id="age11" name="12" required="required" placeholder="Enter the sc">
+                  </div>
+                  <div class="form-group">
+                    <label for="age21">Sodium</label>
+                    <input class="form-group" type="text" id="age21" name="13" required="required" placeholder="Enter the sod">
+                  </div>
+                  <div class="form-group">
+                    <label for="age31">Potassium</label>
+                    <input class="form-group" type="text" id="age31" name="14" required="required" placeholder="Enter the pot">
+                  </div>
+                  <div class="form-group">
+                    <label for="age41">Hemoglobin</label>
+                    <input class="form-group" type="text" id="age41" name="15" required="required" placeholder="Enter the hemo">
+                  </div>
+                  <div class="form-group">
+                    <label for="age51">Packed Cell Volume</label>
+                    <input class="form-group" type="text" id="age51" name="16" required="required" placeholder="Enter the pcv">
+                  </div>
+                  <div class="form-group">
+                    <label for="age61">White Blood Cell Count</label>
+                    <input class="form-group" type="text" id="age61" name="17" required="required" placeholder="Enter the wc">
+                  </div>
+                  <div class="form-group">
+                    <label for="age7">Red Blood Cell Count</label>
+                    <input class="form-group" type="text" id="age7" name="18" required="required" placeholder="Enter the rc">
+                  </div>
+                  <div class="form-group">
+                    <label for="age81">Hypertension</label>
+                    <select class="form-group" name="19" required>
+                      <option value="">Choose a Level</option>
+                      <option value="0">No</option>
+                      <option value="1">Yes</option>
+                      
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="age91">Diabetes Mellitus</label>
+                    <select class="form-group" name="20" required>
+                      <option value="">Choose a Level</option>
+                      <option value="0">No</option>
+                      <option value="1">Yes</option>
+                      
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="age62">Coronary Artery Disease</label>
+                    <select class="form-group" name="21" required>
+                      <option value="">Choose a Level</option>
+                      <option value="0">No</option>
+                      <option value="1">Yes</option>
+                      
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="age72">Appetite</label>
+                    <select class="form-group" name="22" required>
+                      <option value="">Choose a Level</option>
+                      <option value="0">Good</option>
+                      <option value="1">Poor</option>
+                      
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="age82">Pedal Edema</label>
+                    <select class="form-group" name="23" required>
+                      <option value="">Choose a Level</option>
+                      <option value="0">No</option>
+                      <option value="1">Yes</option>
+                      
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="age92">Anemia</label>
+                    <select class="form-group" name="24" required>
+                      <option value="">Choose a Level</option>
+                      <option value="0">No</option>
+                      <option value="1">Yes</option>
+                      
+                    </select>
+                  </div>
+              
+              
+              
+
+
+              
+              <button style="margin-left: 25%;" type="submit" class="btn btn-danger">Predict</button>
+            </form>
+          </div>
+                
+        </div>
+        </div>
+                        
+
+        <!-- /container -->
+
+       <script src="static/js/jquery-1.9.1.js"></script> 
+<script src="static/js/bootstrap.js"></script>
+    </body>
+</html>
