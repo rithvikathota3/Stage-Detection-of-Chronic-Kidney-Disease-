@@ -1,0 +1,31 @@
+1. Importing the packages
+2. exploring the dataset - chronic kidney disease prediction
+3. Data Processing
+	- Data droping if any null values 
+4. Visualization Data using Seaborn and Matplotlib for few columns
+5. Data Cleaning 
+	- Label Encoding for string to int or float
+6. Feature Selection 
+7. Splitting the data into train and test
+6. building the model
+
+	- Random Forest
+	- Decision Tree
+	- KNN
+	- Support Vector Machine
+	- Voting Classifier
+	- AdaBoost
+	- XGBoost
+	- CNN+LSTM
+	- CNN
+
+6.training the model
+7.building the model Voitng Classifier becoz comparing to other models Voting Classifier 
+	gives better accuracy
+8. Flask Framework with Sqlite for signup and signin
+9. User gives input
+10. the given input preprocessed and with trained model is used for predicting the performance 
+11. final outcome is displayed
+
+Note:
+Extension - The extension model is voting classifier gaves better accyracy around 96% of Accuracy 
